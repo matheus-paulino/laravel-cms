@@ -18,4 +18,5 @@ Route::get('/', 'Site\HomeController@index');
 
 Route::prefix('dashboard')->group(function () {
     Route::get('/', 'Admin\HomeController@index');
+    Route::get('login', 'Admin\Auth\LoginController@index')->name('login');
 });
